@@ -33,6 +33,7 @@ SELECT anio, AVG(personas) AS prom_personas
 FROM `nombrescdmx.nombres`
 GROUP BY anio;
 
+
 #Nombres con registros de más de 100 personas en el 2021
 SELECT nombre AS nomb_mas_de_100
 FROM `nombrescdmx.nombres`
@@ -80,3 +81,8 @@ WHERE sexo="Mujer"
 GROUP BY nombre
 ORDER BY SUM(personas) DESC
 LIMIT 10;
+
+
+
+https://console.cloud.google.com/bigquery?project=escuela-codigo-pilares&hl=es-419&organizationId=0&ws=!1m14!1m3!3m2!1sescuela-codigo-pilares!2snombrescdmx!1m4!4m3!1sescuela-codigo-pilares!2snombrescdmx!3snombres!1m4!1m3!1sescuela-codigo-pilares!2sbquxjob_6c53b81e_187ed701be4!3sUS
+
