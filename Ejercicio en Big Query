@@ -1,0 +1,82 @@
+SELECT * 
+FROM `nombrescdmx.nombres`
+WHERE nombre='TLÁLOC';
+
+# DISTINCT (keyword) no toma en cuenta los repetidos y AS renombra 
+SELECT COUNT(DISTINCT nombre) AS nombres
+FROM `nombrescdmx.nombres`;
+
+#para conocer y renombrar año más alto y más bajo
+SELECT MAX(anio) AS anio_mas_alto, MIN(anio) AS anio_mas_bajo
+FROM `nombrescdmx.nombres`;
+
+#total de personas registradas
+SELECT SUM(personas) 
+FROM `nombrescdmx.nombres` AS total_personas_registradas;
+
+#Cuántos inician con Z.
+SELECT nombre AS nombres_que_inician_con_Z
+FROM `nombrescdmx.nombres`
+WHERE nombre LIKE "Z%";
+
+SELECT COUNT(DISTINCT nombre) AS nombres_que_inician_con_Z
+FROM `nombrescdmx.nombres`
+WHERE nombre LIKE "Z%";
+
+#agrupar por año ascendente y renombrar columna
+SELECT anio, SUM(personas) AS num_personas
+FROM `nombrescdmx.nombres` GROUP BY anio
+ORDER BY anio ASC;
+
+#Para sacar promedio AVG
+SELECT anio, AVG(personas) AS prom_personas
+FROM `nombrescdmx.nombres`
+GROUP BY anio;
+
+#Nombres con registros de más de 100 personas en el 2021
+SELECT nombre AS nomb_mas_de_100
+FROM `nombrescdmx.nombres`
+WHERE personas>100 AND anio=2021
+ORDER BY nombre DESC;
+
+#Nombres>10, agrupados por nombre y ordenados por longitud en orden descendente
+SELECT nombre AS nombres_mas_largos
+FROM `nombrescdmx.nombres`
+WHERE LENGTH(nombre)>10
+GROUP BY nombre
+ORDER BY LENGTH(nombre) DESC;
+
+#Personas con mi nombre
+SELECT SUM(personas) AS per_Samantha
+FROM `nombrescdmx.nombres`
+WHERE nombre="SAMANTHA";
+
+#10 nombres más comunes
+SELECT nombre, SUM(personas) AS mas_comun
+FROM `nombrescdmx.nombres`
+GROUP BY nombre
+ORDER BY SUM(personas) DESC
+LIMIT 10;
+
+#10 nombres menos comunes
+SELECT nombre, SUM (personas) menos_comun
+FROM `nombrescdmx.nombres`
+GROUP BY nombre
+ORDER BY SUM(personas) ASC
+LIMIT 10;
+
+#Nombres más comunes de hombre y mujer
+SELECT nombre, SUM(personas) AS mas_comun
+FROM `nombrescdmx.nombres`
+WHERE sexo="Hombre" 
+GROUP BY nombre
+ORDER BY SUM(personas) DESC
+LIMIT 10;
+
+#Nombres más comunes de mujer
+SELECT nombre, SUM(personas) AS mas_comun
+FROM `nombrescdmx.nombres`
+WHERE sexo="Mujer"
+GROUP BY nombre
+ORDER BY SUM(personas) DESC
+LIMIT 10;
