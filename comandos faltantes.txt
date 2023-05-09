@@ -1,0 +1,158 @@
+USE pilares;
+
+#Con esto mostramos toda la tabla de usuarios
+/*
+SELECT *
+FROM usuarios
+LIMIT 10;
+*/
+
+#Con esto hacemos busquedas con ejemplos de filtros
+/*
+SELECT *
+FROM usuarios
+WHERE edad_usuario > 45;
+*/
+
+/*
+SELECT folio_usuario
+FROM usuarios
+WHERE nombre_usuario = 'Quinn';
+*/
+
+#con AS renombramos las busquedas
+/*
+SELECT folio_usuario AS folio_usuario_Quinn
+FROM usuarios
+WHERE nombre_usuario = 'Quinn';
+*/
+
+#Tambien es posible hacer busqueas mas amplias
+/*
+SELECT folio_usuario, nombre_usuario, telefono_usuario
+FROM usuarios
+LIMIT 10;
+*/
+
+#Operadores lógicos.
+
+#Oerador AND.
+#Impresión de usuarios en el rango de 18 a 25 años.
+/*
+SELECT folio_usuario, nombre_usuario, edad_usuario
+FROM usuarios
+WHERE edad_usuario >= 18 AND edad_usuario <= 25;
+*/
+
+#Operador OR
+/*
+SELECT nombre_usuario, apellido_paterno_usuario
+FROM usuarios
+WHERE nombre_usuario = 'Gan' OR apellido_paterno_usuario = 'Kevyn';
+*/
+
+#Funciones
+
+#Función MAX
+/*
+SELECT MAX(edad_usuario) AS edad_mas_alta_de_usuario
+FROM usuarios;
+*/
+
+#Función MIN
+/*
+SELECT MIN (edad_usuario) AS edad_mas_baja_de_usuario
+FROM usuarios;
+*/
+
+#Función AVG
+/*
+SELECT AVG (edad_usuario) AS edad_promedio_de_usuario
+FROM usuarios;
+*/
+
+#Promedio de edad de los usuarios mayores a 30 años
+/*
+SELECT AVG (edad_usuario) AS edad_promedio_de_usuarios_mayores_de_30
+FROM usuarios
+WHERE edad_usuario > 30;
+*/
+
+#Función COUNT
+/*
+SELECT COUNT (folio_usuario) AS numero_de_usuarios
+FROM usuarios;
+*/
+
+#Numero de usuarios mayores de 50 años
+/*
+SELECT COUNT (folio_usuario) AS numero_de_usuarios_mayores_de_50_años
+FROM usuarios
+WHERE edad_usuario > 50;
+*/
+
+#Función ORDER BY
+#La función ORDER BY permite ordenar la información
+#ASC
+/*
+SELECT *
+FROM usuarios
+ORDER BY (edad_usuario) ASC;
+*/
+
+#DESC
+/*
+SELECT nombre_usuario, apellido_paterno_usuario
+FROM usuarios
+ORDER BY (apellido_paterno_usuario) DESC;
+*/
+
+#Ejercicios
+#Mostrar todas las tablas
+
+
+#Mostrar talleristas con nombre Antonio.
+/*
+SELECT *
+FROM tallerista
+WHERE nombre_tallerista = 'Antonio';
+*/
+
+#Mostrar solo el nombre del pilares cuyo codigo sea pil04
+/*
+SELECT nombre_pilares
+FROM pilares
+WHERE codigo_pilares = 'PIL04';
+*/
+
+#Mostrar la tabla responsable de manera ascedente por el apellido del responsable
+/*
+SELECT *
+FROM responsable
+ORDER BY (apellido_paterno_responsable) ASC;
+*/
+
+#Mostrar los folios de los usuarios inscritos en el grupo 1
+/*
+SELECT folio_usuario1
+FROM grupo
+WHERE codigo_grupo = '0455';
+*/
+
+#Busqueda de nombres de usuario cuya edad sea igual a la maxima edad.
+/*
+SELECT nombre_usuario
+FROM usuarios
+ORDER BY (edad_usuario) DESC
+LIMIT 1;
+*/
+
+#subconsultas = dos consultas en una
+/*
+SELECT MAX (edad_usuario)
+FROM usuarios;
+
+SELECT nombre_usuario
+FROM usuarios
+WHERE edad_usuario = 65;
+*/
