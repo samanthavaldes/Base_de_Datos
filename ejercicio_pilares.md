@@ -27,3 +27,8 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/9
 ### LEFT JOIN
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/9
 
+
+##EJERCICIOS ROB 11/05
+
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/14
+
