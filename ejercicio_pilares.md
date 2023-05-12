@@ -18,7 +18,7 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/5
 
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/6
 
-###EJERCICIOS JOIN Y CÓDIGO FALTANTE
+### EJERCICIOS JOIN Y CÓDIGO FALTANTE
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/13
 
 ### INNER JOIN 
@@ -28,7 +28,10 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/9
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/9
 
 
-##EJERCICIOS ROB 11/05
+### EJERCICIOS ROB 11/05
 
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/14
+
+### EJERCICIOS 12/05 
+https://www.db-fiddle.com/f/bMufvy6yomDTAM9fHgjLh3/2
 
