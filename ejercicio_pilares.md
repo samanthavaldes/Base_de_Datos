@@ -35,3 +35,7 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/14
 ### EJERCICIOS 12/05 
 https://www.db-fiddle.com/f/bMufvy6yomDTAM9fHgjLh3/2
 
+### EJERCICIOS 16/05
+https://www.db-fiddle.com/f/bMufvy6yomDTAM9fHgjLh3/4
+
+
